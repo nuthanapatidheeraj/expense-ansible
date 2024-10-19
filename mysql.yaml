@@ -31,7 +31,7 @@
     register: mysql_info
 
   - name: print mysql info
-    ansible.built.debug:  
+    ansible.builtin.debug:  
       msg: "{{ mysql_info }}"  
 
   - name: setup mysql root password
