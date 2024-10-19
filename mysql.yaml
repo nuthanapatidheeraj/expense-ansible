@@ -23,7 +23,7 @@
       enabled: yes    
 
   - name: connect mysql server
-    community.mysql.mysql.info:
+    community.mysql.mysql_info:
       login_user: root
       login_password: "{{ mysql_root_password }}" 
       login_host: "{{ login_host }}"   
