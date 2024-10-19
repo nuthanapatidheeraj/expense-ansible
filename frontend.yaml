@@ -3,14 +3,16 @@
   become: yes
   tasks:
   - name: install nginx server
-    ansible.built.package:
+    ansible.builtin.package:
     name : nginx
     state: present
+
   - name: start nginx server
     ansible.builtin.service:
       name: nginx
       state: started
       enabled: yes
+
   - name: remove html directory
     ansible.builtin.file:
       path : /usr/share/nginx/html
@@ -41,6 +43,6 @@
     ansible.builtin.service:
       name: nginx
       state: restarted
-          
+
 
 
